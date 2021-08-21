@@ -1,15 +1,33 @@
 body {
   margin: 0;
   font-family: "Roboto";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* .content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+} */
 
 .Appbar {
   flex-grow: 1;
 }
+
+.Appbar h4 {
+  flex: 1;
+}
+
+.issue-list {
+  flex-grow: 1;
+  margin-top: 75px;
+  min-width: 300px;
+}
+
+/* .content {
+  padding-bottom: 2000px;
+  margin: auto;
+} */
+
+.issue-item {
+  
+} 

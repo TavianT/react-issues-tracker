@@ -4,9 +4,9 @@ import Nav from './Nav'
 const Appbar = () => {
     return (
         <div className="Appbar">
-            <AppBar>
+            <AppBar position="sticky">
                 <Toolbar>
-                    <Typography variant="h4" style={{ flex: 1 }}>
+                    <Typography variant="h4">
                         Issue Tracker
                     </Typography>
                     <Nav></Nav>
