@@ -4,19 +4,22 @@
             "title": "floating list",
             "body": "List in home page is floating slightly to the right.",
             "author": "Tavian",
-            "triage": "Not shipstopper"
+            "triage": "Not shipstopper",
+            "id": "0"
         },
         {
             "title": "Double button click causing crash",
             "body": "Double button click causing website front end to crash",
             "author": "Tavian",
-            "triage": "Shipstopper"
+            "triage": "Shipstopper",
+            "id": "1"
         },
         {
             "title": "CSS looking flat",
             "body": "CSS doesn't look amazing",
             "author": "Law",
-            "triage": "None"
+            "triage": "None",
+            "id": "2"
         }
     ]
 }

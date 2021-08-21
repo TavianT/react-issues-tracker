@@ -1,14 +1,26 @@
 import Appbar from "./Appbar";
-import IssueList from "./IssueList";
+import Home from "./Home";
+import IssueDetails from "./IssueDetails";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <Appbar></Appbar>
-      <div className="content">
-        <IssueList></IssueList>
+    <Router>
+      <div className="App">
+        <Appbar></Appbar>
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="issues/:id">
+              <IssueDetails></IssueDetails>
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
+    
   );
 }
 

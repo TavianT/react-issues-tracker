@@ -30,4 +30,8 @@ body {
 .issue-item {
   min-width: 450px;
   max-width: 450px;
-} 
+}
+
+.issue-item a {
+  text-decoration: none;
+}
