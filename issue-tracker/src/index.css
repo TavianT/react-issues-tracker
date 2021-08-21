@@ -20,7 +20,6 @@ body {
 .issue-list {
   flex-grow: 1;
   margin-top: 75px;
-  min-width: 300px;
 }
 
 /* .content {
@@ -29,5 +28,6 @@ body {
 } */
 
 .issue-item {
-  
+  min-width: 450px;
+  max-width: 450px;
 } 

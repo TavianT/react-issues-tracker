@@ -1,4 +1,5 @@
-import { Container, Grid, Paper, Card, CardHeader, CardContent, Typography } from "@material-ui/core";
+import { Container, Grid, Paper, Card, CardHeader, CardContent, Typography, IconButton } from "@material-ui/core";
+import DeleteIcon from '@material-ui/icons/Delete';
 import { useState } from "react";
 
 const IssueList = () => {
@@ -21,6 +22,12 @@ const IssueList = () => {
                 body: "CSS doesn't look amazing",
                 author: "Law",
                 triage: "None"
+            },
+            {
+                title: "CSS looking flat dfgfdsghfsdgfsdgfdsgfsdgsd",
+                body: "CSS doesn't look amazing",
+                author: "Law",
+                triage: "None"
             }
         ])
     return ( 
@@ -34,16 +41,20 @@ const IssueList = () => {
 
             {issues.map(issue => (
                 <Grid item className="issue-item">
-                    {/* <Paper elevation="3">{issue.title}</Paper> */}
                     <Card>
                         <CardHeader
-                        title={issue.title}>
+                        title={issue.title}
+                        action={
+                            <IconButton aria-label="delete">
+                                <DeleteIcon />
+                            </IconButton>
+                        }>
                         </CardHeader>
                         <CardContent>
-                            <Typography>
+                            <Typography noWrap >
                                 {issue.body}
                             </Typography>
-                            <Typography variant="body2" style={{ fontWeight: 600 }}>
+                            <Typography variant="body2" style={{ fontWeight: 600 }} noWrap >
                                 {issue.author} | Triage: {issue.triage}
                             </Typography>
                         </CardContent>
