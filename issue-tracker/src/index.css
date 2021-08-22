@@ -3,11 +3,11 @@ body {
   font-family: "Roboto";
 }
 
-/* .content {
+.content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-} */
+}
 
 .Appbar {
   flex-grow: 1;
@@ -19,13 +19,7 @@ body {
 
 .issue-list {
   flex-grow: 1;
-  margin-top: 75px;
 }
-
-/* .content {
-  padding-bottom: 2000px;
-  margin: auto;
-} */
 
 .issue-item {
   min-width: 450px;
@@ -33,5 +27,9 @@ body {
 }
 
 .issue-item a {
+  text-decoration: none;
+}
+
+.nav a {
   text-decoration: none;
 }
