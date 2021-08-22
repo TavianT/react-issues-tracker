@@ -1,4 +1,4 @@
-import { Container, Grid, Card, CardHeader, CardContent, Typography, IconButton } from "@material-ui/core";
+import { Container, Grid, Card, CardHeader, CardContent, Typography } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 
 const IssueList = ({issues}) => {

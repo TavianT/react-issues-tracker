@@ -7,6 +7,13 @@ const IssueDetails = () => {
     const { id } = useParams();
     const { data: issue, error, isPending } = useFetch('http://localhost:8000/issues/' + id);
     const history = useHistory();
+    const handleDelete = () => {
+        fetch('http://localhost:8000/issues/' + issue.id, {
+        method: 'DELETE'
+        }).then(() => {
+            history.push('/');
+        })
+    }
     return ( 
         <div className="issue-details">
             { isPending && <div>Loading...</div> }
@@ -14,8 +21,8 @@ const IssueDetails = () => {
             {issue && (
                 <article>
                     <Typography variant="h3" gutterBottom="true">
-                        {issue.title} #{issue.id}
-                        <IconButton aria-label="Delete issue">
+                        {issue.title}
+                        <IconButton aria-label="Delete issue" onClick={handleDelete}>
                             <DeleteIcon fontSize="large" />
                         </IconButton>
                     </Typography>
