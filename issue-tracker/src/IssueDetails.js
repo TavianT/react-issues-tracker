@@ -1,5 +1,7 @@
 import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import { Typography, IconButton } from "@material-ui/core";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const IssueDetails = () => {
     const { id } = useParams();
@@ -7,7 +9,27 @@ const IssueDetails = () => {
     const history = useHistory();
     return ( 
         <div className="issue-details">
-            <h2>{issue.title}</h2>
+            { isPending && <div>Loading...</div> }
+            { error && <div>{ error }</div> }
+            {issue && (
+                <article>
+                    <Typography variant="h3" gutterBottom="true">
+                        {issue.title} #{issue.id}
+                        <IconButton aria-label="Delete issue">
+                            <DeleteIcon fontSize="large" />
+                        </IconButton>
+                    </Typography>
+                    <Typography variant="body1" paragraph="true">
+                        {issue.body}
+                    </Typography>
+                    <Typography variant="body2" style={{ fontWeight: 600 }}>
+                        Triage: {issue.triage}
+                    </Typography>
+                    <Typography variant="subtitle1" paragraph="true">
+                        {issue.author}
+                    </Typography>
+                </article>
+            )}
         </div>
      );
 }

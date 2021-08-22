@@ -1,5 +1,4 @@
-import { Container, Grid, Paper, Card, CardHeader, CardContent, Typography, IconButton } from "@material-ui/core";
-import DeleteIcon from '@material-ui/icons/Delete';
+import { Container, Grid, Card, CardHeader, CardContent, Typography, IconButton } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 
 const IssueList = ({issues}) => {
@@ -18,12 +17,7 @@ const IssueList = ({issues}) => {
                     <Link to={`/issues/${issue.id}`}>
                         <Card>
                             <CardHeader
-                            title={issue.title}
-                            action={
-                                <IconButton aria-label="delete">
-                                    <DeleteIcon />
-                                </IconButton>
-                            }>
+                            title={issue.title}>
                             </CardHeader>
                             <CardContent>
                                 <Typography noWrap >
